@@ -6,14 +6,26 @@ const books = [
 const bookList = document.querySelector('#book-list ul');
 const addBookBtn = document.forms['book']['btn-add'];
 
-books.forEach(book => {
+function checkBook (book1, book2) {
+    return book1 == book2;
+}
+books.forEach((book, index)=> {
     const tags = `<li>
    <h3>${book.title}</h3>
    <p>${book.author}</p>
-   <button>Remove</button>
+   <button class="remove-btn">Remove</button>
    </li>`;
    bookList.innerHTML+=tags
+   const removeBtn = document.querySelectorAll('.remove-btn');
+   console.log(removeBtn);
+   removeBtn.forEach((elem) => {
+    elem.addEventListener('click', () => {
+        alert(book.author);
+       })
+    });
    });
+
+   
 
 addBookBtn.addEventListener('click', (event) => {
     event.preventDefault();
@@ -22,7 +34,6 @@ addBookBtn.addEventListener('click', (event) => {
     addNewBook(bookTitle, bookAuthor, books, bookList);
     const jsonObject = JSON.stringify(books);
     window.localStorage.setItem('booklist',jsonObject);
-    console.log(window.localStorage.getItem('booklist'))
 });
 
 function addNewBook(title, author, bookList, htmlBookList){
@@ -37,4 +48,8 @@ function addNewBook(title, author, bookList, htmlBookList){
         <button>Remove</button>
         </li>`;
     htmlBookList.innerHTML += tags;
+}
+
+function removeBook (b){
+
 }
