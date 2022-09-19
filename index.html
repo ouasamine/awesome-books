@@ -10,20 +10,21 @@
 <body>
   <header>
     <h1>Awesome Books</h1>
-    <p>author 1</p>
   </header>
   <section id="book-list">
     <ul>
     </ul>
   </section>
-  <form method="post" action="">
+  <form name="book" method="post">
     <fieldset>
-      <input type="text" placeholder="Title" >
+      <label>
+        <input name="title" type="text" placeholder="Title" >
+      </label>
+      <label>
+        <input name="author" type="text" placeholder="Author" >
+      </label>
     </fieldset>
-    <fieldset>
-      <input type="text" placeholder="Author" >
-    </fieldset>
-    <button type="submit">Add</button>
+    <button name="btn-add" type="submit">Add</button>
   </form>
   <script src="./books.js"></script>
 </body>
