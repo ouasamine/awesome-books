@@ -20,6 +20,9 @@ addBookBtn.addEventListener('click', (event) => {
     const bookAuthor = document.forms['book']['author'].value;
     const bookTitle = document.forms['book']['title'].value;
     addNewBook(bookTitle, bookAuthor, books, bookList);
+    const jsonObject = JSON.stringify(books);
+    window.localStorage.setItem('booklist',jsonObject);
+    console.log(window.localStorage.getItem('booklist'))
 });
 
 function addNewBook(title, author, bookList, htmlBookList){
