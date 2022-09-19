@@ -1,0 +1,40 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 15px;
+}
+
+ul {
+  list-style: none;
+  margin: 15px 0;
+}
+
+fieldset {
+  border: none;
+}
+
+form label {
+  display: block;
+}
+
+form input {
+  margin: 5px 0;
+}
+
+button {
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+#book-list ul li {
+  margin: 5px 0;
+  padding: 10px;
+  border-bottom: 1px solid #a0a0a0;
+}
