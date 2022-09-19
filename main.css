@@ -2,12 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   padding: 15px;
 }
 
@@ -24,7 +24,7 @@ form label {
   display: block;
 }
 
-form input{
+form input {
   margin: 5px 0;
 }
 
@@ -33,7 +33,7 @@ button {
   cursor: pointer;
 }
 
-#book-list ul li{
+#book-list ul li {
   margin: 5px 0;
   padding: 10px;
   border-bottom: 1px solid #a0a0a0;
