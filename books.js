@@ -6,25 +6,32 @@ const books = [
 const bookList = document.querySelector('#book-list ul');
 const addBookBtn = document.forms['book']['btn-add'];
 
-function checkBook (book1, book2) {
-    return book1 == book2;
-}
-books.forEach((book, index)=> {
+// function checkBook (book1, book2) {
+//     return book1 == book2;
+// }
+
+window.addEventListener('load',() =>{
+  createList(books)
+})
+
+function createList(bookArr){
+  bookArr.forEach((book, index)=> {
     const tags = `<li>
    <h3>${book.title}</h3>
    <p>${book.author}</p>
    <button class="remove-btn">Remove</button>
    </li>`;
-   bookList.innerHTML+=tags
-   const removeBtn = document.querySelectorAll('.remove-btn');
+   bookList.innerHTML+=tags   
+   });  
+}
+
+const removeBtn = document.querySelectorAll('.remove-btn');
    console.log(removeBtn);
    removeBtn.forEach((elem) => {
     elem.addEventListener('click', () => {
         alert(book.author);
        })
     });
-   });
-
    
 
 addBookBtn.addEventListener('click', (event) => {
@@ -41,13 +48,9 @@ function addNewBook(title, author, bookList, htmlBookList){
         author: author,
         title: title
     };
-    bookList.push(newBook)
-    const tags = `<li>
-        <h3>${newBook.title}</h3>
-        <p>${newBook.author}</p>
-        <button>Remove</button>
-        </li>`;
-    htmlBookList.innerHTML += tags;
+    books.push(newBook)
+    createList(books)
+    
 }
 
 function removeBook (b){
