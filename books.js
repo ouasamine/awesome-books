@@ -47,8 +47,7 @@ function printBookList (bookList, container){
   container.innerHTML = '';
   bookList.forEach(element => {
     const listItem = document.createElement('li');
-    const tags = `<h3>${element.title}</h3>
-        <p>${element.author}</p>
+    const tags = `<p>"${element.title}" by ${element.author}</p>        
         <button class="remove-btn">Remove</button>
         `;
     listItem.innerHTML = tags;
