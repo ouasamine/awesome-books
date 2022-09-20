@@ -1,12 +1,14 @@
-
+/* eslint-disable no-unused-expressions */
+/* eslint-disable class-methods-use-this */
+/* eslint-disable max-classes-per-file */
 class BookList {
-  constructor(books){
+  constructor() {
     this.list = [];
     return this.list;
   }
 }
 
-let Booklist = new BookList;
+let Booklist = new BookList();
 
 class Book {
   constructor() {
@@ -14,38 +16,38 @@ class Book {
     this.author;
     this.title;
   }
-  getBooks(){
+
+  getBooks() {
     Booklist = JSON.parse(localStorage.getItem('booklist'));
     return Booklist;
   }
 
-  storeBooks(){
-    let booklist = JSON.stringify(Booklist);
+  storeBooks() {
+    const booklist = JSON.stringify(Booklist);
     localStorage.setItem('booklist', booklist);
   }
 
   addBook(title, author) {
-    this.index = Booklist.length ;
+    this.index = Booklist.length;
     this.author = author;
     this.title = title;
     Booklist.push(this);
     this.storeBooks();
   }
 
-  removeBook(elemIndex){
-    Booklist.forEach((book, index)=>{
-      if(book.index == elemIndex){
+  removeBook(elemIndex) {
+    Booklist.forEach((book, index) => {
+      if (parseInt(book.index, 10) === parseInt(elemIndex, 10)) {
         Booklist.splice(index, 1);
       }
     });
     this.storeBooks();
   }
-
 }
 
-function printBookList (bookList, container){
+function printBookList(bookList, container) {
   container.innerHTML = '';
-  bookList.forEach(element => {
+  bookList.forEach((element) => {
     const listItem = document.createElement('li');
     const tags = `<p>"${element.title}" by ${element.author}</p>        
         <button class="remove-btn">Remove</button>
@@ -55,7 +57,7 @@ function printBookList (bookList, container){
 
     const removeBtn = listItem.querySelector('.remove-btn');
     removeBtn.addEventListener('click', () => {
-      const books = new Book;
+      const books = new Book();
       listItem.remove();
       books.removeBook(element.index);
     });

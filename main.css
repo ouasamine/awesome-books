@@ -25,50 +25,51 @@ ul {
   margin: 15px 0;
   border: 2px solid black;
 }
- h2 {
+
+h2 {
   text-align: center;
   margin-top: 3rem;
- }
+}
 
- .formfields {
+.formfields {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
- }
+}
 
- .hr-line {
+.hr-line {
   padding-top: 0.5rem;
   display: flex;
   flex-direction: column;
- }
+}
 
- hr {
+hr {
   width: 20vw;
   align-self: center;
- }
+}
 
- form {
+form {
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: fit-content;
- }
+}
 
- form fieldset {
+fieldset {
+  border: none;
+}
+
+form fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
- }
+}
 
- .add-btn {
+.add-btn {
   width: 5rem;
   height: 2rem;
   align-self: flex-end;
- }
-fieldset {
-  border: none;
 }
 
 form label {
@@ -84,12 +85,11 @@ button {
   cursor: pointer;
 }
 
-#book-list ul li:nth-child(even) {
-  background-color: grey;
-}
-
-
 #book-list ul li {
   margin: 5px 0;
   padding: 10px;
+}
+
+#book-list ul li:nth-child(even) {
+  background-color: grey;
 }
