@@ -28,7 +28,10 @@ class Book {
   }
 
   addBook(title, author) {
-    this.index = Booklist.length;
+    if (!Booklist) {
+      Booklist = [];
+    }
+    this.index = !Booklist ? 0 : Booklist.length;
     this.author = author;
     this.title = title;
     Booklist.push(this);
@@ -76,4 +79,6 @@ addBookBtn.addEventListener('click', (event) => {
   printBookList(bookList, htmlContainer);
 });
 const books = new Book();
-printBookList(books.getBooks(), htmlContainer);
+if (books.getBooks()) {
+  printBookList(books.getBooks(), htmlContainer);
+}
