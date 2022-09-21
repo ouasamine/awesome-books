@@ -108,4 +108,4 @@ link.forEach((lnk) => {
 const datetime = document.querySelector('#datetime');
 const date = new Date();
 
-datetime.innerHTML = date.toDateString() + ', ' + date.toLocaleTimeString();
+datetime.innerHTML = `${date.toDateString()}, ${date.toLocaleTimeString()}`;
