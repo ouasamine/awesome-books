@@ -11,6 +11,26 @@ body {
   padding: 15px;
 }
 
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  padding: 2px;
+}
+
+#navbar nav ul {
+  display: flex;
+}
+
+#navbar nav ul li {
+  padding: 0 8px 0 8px;
+}
+
+#navbar nav ul li:nth-child(2){
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
 header {
   text-align: center;
 }
@@ -91,4 +111,23 @@ button {
 
 #book-list ul li:nth-child(even) {
   background-color: grey;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+#contact p ul {
+  width: 200px;
+  list-style-type: disc;
+}
+
+footer {
+  border: 2px solid black;
+  padding: 2px;
+  margin-top: 15px;
 }
