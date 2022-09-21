@@ -12,21 +12,20 @@
     <h5>Awesome Books</h5>
     <nav>
       <ul>
-        <li><a>List</a></li>
-        <li><a>Add New</a></li>
-        <li><a>Contact</a></li>
+        <li><a id="book-list-lnk">List</a></li>
+        <li><a id="formfields-lnk">Add New</a></li>
+        <li><a id="contact-lnk">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <section id="book-list">
+  <section id="book-list" class="">
     <header>
       <h2>All Books List</h2>
     </header>
     <ul>
     </ul>
   </section>
-  <div class="hr-line"><hr></div>
-  <section class="formfields">
+  <section id="formfields" class="hide">
     <h2>Add a new book</h2>
       <form name="book" method="post">
         <fieldset>
@@ -40,7 +39,7 @@
         <button class="add-btn" name="btn-add" type="submit">Add</button>
       </form>
   </section>
-  <section id="contact">
+  <section id="contact" class="hide">
     <header>
       <h2>Contact Information</h2>
     </header>
