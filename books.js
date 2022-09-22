@@ -30,8 +30,11 @@ class Book {
   addBook(title, author) {
     if (!Booklist) {
       Booklist = [];
+      this.index = 0;
+    } else {
+      const lastElemIndex = Booklist.slice(-1).pop().index;
+      this.index = lastElemIndex + 1;
     }
-    this.index = !Booklist ? 0 : Booklist.length;
     this.author = author;
     this.title = title;
     Booklist.push(this);
@@ -39,11 +42,7 @@ class Book {
   }
 
   removeBook(elemIndex) {
-    Booklist.forEach((book, index) => {
-      if (parseInt(book.index, 10) === parseInt(elemIndex, 10)) {
-        Booklist.splice(index, 1);
-      }
-    });
+    Booklist = Booklist.filter((book) => parseInt(book.index) !== parseInt(elemIndex));
     this.storeBooks();
   }
 }
@@ -52,7 +51,7 @@ function printBookList(bookList, container) {
   container.innerHTML = '';
   bookList.forEach((element) => {
     const listItem = document.createElement('li');
-    const tags = `<p>"${element.title}" by ${element.author}</p>        
+    const tags = `<p>"${element.index} - ${element.title}" by ${element.author}</p>        
         <button class="remove-btn">Remove</button>
         `;
     listItem.innerHTML = tags;
