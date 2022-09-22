@@ -42,7 +42,7 @@ class Book {
   }
 
   removeBook(elemIndex) {
-    Booklist = Booklist.filter((book) => parseInt(book.index) !== parseInt(elemIndex));
+    Booklist = Booklist.filter((book) => parseInt(book.index, 10) !== parseInt(elemIndex, 10));
     this.storeBooks();
   }
 }
