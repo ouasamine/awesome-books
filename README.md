@@ -1,18 +1,13 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# awesome-books
+# Awesome Books
 
-> A simple website that contains a editable list of books
-
+> A simple website that follows the single page application model (SPA) built with plain Html and basic css design, users can add or remove existing books from the list and the books list is displayed and updated each time the user adds or remove a book. The display, adding and removing functionalities of the project have been coded with javascript.
 
 ## Built With
 
 - HTML 5 / Css 3
 - Javascript
-
-## Live Demo
-
-Check [the live version](https://ouasamine.github.io/live) of this project.
 
 ## Getting Started
 
@@ -28,9 +23,9 @@ To get a local copy up and running follow these simple example steps.
   - To clone and run this project on your local machine please follow the commands (Windows Command Line):
   ```
   cd PATH 
-  git clone _https://github.com/ouasamine/awesome-books.git _
-  cd _awesome-books_
-  _index.html_ 
+  git clone https://github.com/ouasamine/awesome-books.git 
+  cd awesome-books
+  index.html
   ```
   _(instead of PATH put yor preferred directory where the repository files will download)_
 
