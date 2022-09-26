@@ -32,17 +32,15 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author 1**
+👤 **Amine**
 
 - GitHub: [@ouasamine](https://github.com/ouasamine)
 - Twitter: [@ouass_amine](https://twitter.com/ouass_amine)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/amine-ouassef-314686214/)
 
-👤 **Author 2**
+👤 **TeeJay**
 
-- GitHub: [@ouasamine](https://github.com/ouasamine)
-- Twitter: [@ouass_amine](https://twitter.com/ouass_amine)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/amine-ouassef-314686214/)
+- GitHub: [@j-tee](https://github.com/j-tee)
 
 ## 🤝 Contributing
 
